@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innov8 - Advanced Operating System</title>
+    <link href="./output.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+    <!-- Header with "For Students" text -->
+    <header class="bg-blue-900 text-white h-11 relative overflow-hidden">
+        <div class="container mx-auto py-2 px-4">
+            <div class="text-base font-normal">For Students</div>
+        </div>
+    </header>
+
+    <!-- Logo and user navigation -->
+    <nav class="bg-blue-100 h-30 relative overflow-hidden">
+        <div class="container mx-auto flex justify-between items-center py-3 px-4">
+            <div class="flex items-center">
+                <div class="text-blue-900 text-5xl font-semibold">Innov8</div>
+                <img class="w-30 h-14 ml-4" src="https://placehold.co/119x54" alt="Logo" />
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="text-blue-900 text-3xl font-normal">Yessine B.Hamroun</div>
+                <div class="text-blue-900">
+                    <i class="fas fa-bell text-2xl"></i>
+                </div>
+                <div class="text-blue-900">
+                    <i class="fas fa-user-circle text-2xl"></i>
+                </div>
+                <div class="text-blue-900">
+                    <i class="fas fa-cog text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main class="container mx-auto py-6 px-4 flex-grow">
+        <!-- Title and tutor -->
+        <div class="flex flex-col lg:flex-row items-start justify-between mb-8">
+            <!-- Left side - Course title -->
+            <div class="order-1">
+                <h1 class="text-blue-900 text-2xl font-bold mb-2 lg:mb-0">Advanced Operating System</h1>
+            </div>
+            
+            <!-- Right side - Tutor dropdown -->
+            <div class="flex items-center gap-4 mb-4 lg:mb-0 order-2">
+                <div class="flex items-center text-blue-900">
+                    <span class="font-medium mr-2">Tutor:</span>
+                    <select class="bg-white border border-gray-300 rounded px-2 py-1">
+                        <option value="nour">Nour</option>
+                        <option value="yessine">Yessine</option>
+                        <option value="hamroun">Hamroun</option>
+                    </select>
+                </div>
+                <a href="#" class="inline-flex items-center bg-blue-900 text-white px-4 py-2 rounded">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back
+                </a>
+            </div>
+        </div>
+
+        <!-- Two column layout for content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Left column - Exercises -->
+            <div class="bg-[#EFF0FD] p-6 rounded-lg shadow-sm">
+                <h2 class="text-gray-800 font-bold text-xl mb-4">Exercises</h2>
+
+                <!-- Exercise 1 -->
+                <div class="mb-6">
+                    <h3 class="text-gray-800 font-medium">Question 1: Which technique optimizes RAM usage?</h3>
+                    <div class="mt-4 space-y-2">
+                        <div class="flex items-center">
+                            <input type="radio" name="question1" class="mr-2">
+                            <label>Pagination</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="question1" class="mr-2">
+                            <label>Segmentation</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="question1" class="mr-2">
+                            <label>Swapping</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="question1" class="mr-2">
+                            <label>Fragmentation</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 2 -->
+                <div class="mb-6">
+                    <h3 class="text-gray-800 font-medium">Question 2: What is the purpose of segmentation?</h3>
+                    <div class="mt-4 space-y-2">
+                        <div class="flex items-center">
+                            <input type="radio" name="question2" class="mr-2">
+                            <label>To divide memory into fixed-size blocks</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="question2" class="mr-2">
+                            <label>To divide memory into logical segments</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="question2" class="mr-2">
+                            <label>To swap memory pages</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="question2" class="mr-2">
+                            <label>To reduce fragmentation</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 3 -->
+                <div class="mb-6">
+                    <h3 class="text-gray-800 font-medium">Question 3: What is swapping?</h3>
+                    <div class="mt-4 space-y-2">
+                        <div class="flex items-center">
+                            <input type="radio" name="question3" class="mr-2">
+                            <label>Moving processes to disk to free RAM</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="question3" class="mr-2">
+                            <label>Dividing memory into pages</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="question3" class="mr-2">
+                            <label>Combining memory segments</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="question3" class="mr-2">
+                            <label>Reducing memory usage</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 4 -->
+                <div class="mb-6">
+                    <h3 class="text-gray-800 font-medium">Question 4: What causes fragmentation?</h3>
+                    <div class="mt-4 space-y-2">
+                        <div class="flex items-center">
+                            <input type="radio" name="question4" class="mr-2">
+                            <label>Inefficient memory allocation</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="question4" class="mr-2">
+                            <label>Too many processes running</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="question4" class="mr-2">
+                            <label>Lack of swapping</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="question4" class="mr-2">
+                            <label>Segmentation faults</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Exercise -->
+                <div class="mb-6">
+                    <h3 class="text-gray-800 font-medium">Final Exercise</h3>
+                    <div class="mt-4 space-y-2">
+                        <div class="flex items-center">
+                            <input type="radio" name="final" class="mr-2">
+                            <label>Validate all exercises</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Validate Button -->
+                <div class="mt-8">
+                    <button class="bg-blue-900 text-white px-4 py-2 rounded w-full">
+                        <i class="fas fa-check mr-2"></i>
+                        Validate
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right column - Navigation -->
+            <div class="bg-[#EFF0FD] p-6 rounded-lg shadow-sm">
+                <!-- Tabs -->
+                <div class="flex space-x-2 mb-6">
+                    <button id="lessonsBtn" class="px-4 py-2 rounded">Lessons</button>
+                    <button id="exercisesBtn" class="px-4 py-2 rounded">Exercises</button>
+                    <button id="questionsBtn" class="px-4 py-2 rounded">Questions</button>
+                </div>
+
+                <!-- Chapters list -->
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-blue-900 mr-3">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <span>Chapter 1: Memory Management</span>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-blue-900 mr-3">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <span>Chapter 2: Fork</span>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-blue-900 mr-3">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <span>Chapter 3: Wait and Exit</span>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-blue-900 mr-3">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <span>Chapter 4: Process Management</span>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-blue-900 mr-3">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <span>Chapter 5: Recap</span>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Correction PDF Button (Below the box) -->
+        <div class="mt-8 flex justify-center">
+            <button class="bg-blue-900 text-white px-4 py-2 rounded">
+                <i class="fas fa-file-pdf mr-2"></i>
+                Correction PDF
+            </button>
+        </div>
+    </main>
+
+    <script>
+        // JavaScript for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the buttons
+            const lessonsBtn = document.getElementById('lessonsBtn');
+            const exercisesBtn = document.getElementById('exercisesBtn');
+            const questionsBtn = document.getElementById('questionsBtn');
+
+            // Function to handle button clicks
+            function handleButtonClick(button, pageUrl) {
+                // Remove active class from all buttons
+                lessonsBtn.classList.remove('bg-blue-600', 'text-white');
+                exercisesBtn.classList.remove('bg-blue-600', 'text-white');
+                questionsBtn.classList.remove('bg-blue-600', 'text-white');
+
+                // Add active class to the clicked button
+                button.classList.add('bg-blue-600', 'text-white');
+
+                // Save the active button in session storage
+                sessionStorage.setItem('activeButton', button.id);
+
+                // Navigate to the specified page
+                window.location.href = pageUrl;
+            }
+
+            // Add event listeners to the buttons
+            lessonsBtn.addEventListener('click', () => handleButtonClick(lessonsBtn, 'cour.html'));
+            exercisesBtn.addEventListener('click', () => handleButtonClick(exercisesBtn, 'exercices.html'));
+            questionsBtn.addEventListener('click', () => handleButtonClick(questionsBtn, 'questions.html'));
+
+            // Highlight the active button based on session storage
+            const activeButtonId = sessionStorage.getItem('activeButton');
+            if (activeButtonId) {
+                const activeButton = document.getElementById(activeButtonId);
+                if (activeButton) {
+                    activeButton.classList.add('bg-blue-600', 'text-white');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

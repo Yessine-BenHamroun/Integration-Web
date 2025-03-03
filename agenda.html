@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innov8 - Agenda</title>
+    <link href="./output.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+    <!-- Header with "For Students" text -->
+    <header class="bg-blue-900 text-white h-11 relative overflow-hidden">
+        <div class="container mx-auto py-2 px-4">
+            <div class="text-base font-normal">For Students</div>
+        </div>
+    </header>
+
+    <!-- Logo and user navigation -->
+    <nav class="bg-blue-100 h-30 relative overflow-hidden">
+        <div class="container mx-auto flex justify-between items-center py-3 px-4">
+            <div class="flex items-center">
+                <div class="text-blue-900 text-5xl font-semibold">Innov8</div>
+                <img class="w-30 h-14 ml-4" src="https://placehold.co/119x54" alt="Logo" />
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="text-blue-900 text-3xl font-normal">Yessine B.Hamroun</div>
+                <div class="text-blue-900">
+                    <i class="fas fa-bell text-2xl"></i>
+                </div>
+                <div class="text-blue-900">
+                    <i class="fas fa-user-circle text-2xl"></i>
+                </div>
+                <div class="text-blue-900">
+                    <i class="fas fa-cog text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main class="container mx-auto py-6 px-4 flex-grow">
+        <!-- Title and tutor -->
+        <div class="flex flex-col lg:flex-row items-start justify-between mb-8">
+            <!-- Left side - Course title -->
+            <div class="order-1">
+                <h1 class="text-blue-900 text-2xl font-bold mb-2 lg:mb-0">Advanced Operating System</h1>
+            </div>
+            
+            <!-- Right side - Tutor dropdown -->
+            <div class="flex items-center gap-4 mb-4 lg:mb-0 order-2">
+                <div class="flex items-center text-blue-900">
+                    <span class="font-medium mr-2">Tutor:</span>
+                    <select class="bg-white border border-gray-300 rounded px-2 py-1">
+                        <option value="nour">Nour</option>
+                        <option value="yessine">Yessine</option>
+                        <option value="hamroun">Hamroun</option>
+                    </select>
+                </div>
+                <a href="#" class="inline-flex items-center bg-blue-900 text-white px-4 py-2 rounded">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back
+                </a>
+            </div>
+        </div>
+
+        <!-- Calendar and Progress Tracker -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Left column - Dynamic Calendar -->
+            <div class="bg-[#EFF0FD] p-6 rounded-lg shadow-sm" id="dynamic-calendar">
+                <!-- Calendar navigation -->
+                <div class="flex items-center justify-between mb-4">
+                    <button id="prev-month" class="text-blue-900 hover:bg-blue-100 p-2 rounded">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h2 class="text-gray-800 font-bold text-xl" id="month-year">February</h2>
+                    <button id="next-month" class="text-blue-900 hover:bg-blue-100 p-2 rounded">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Weekday headers -->
+                <div class="grid grid-cols-7 gap-2 text-center">
+                    <div class="text-gray-600 font-medium">Sun</div>
+                    <div class="text-gray-600 font-medium">Mon</div>
+                    <div class="text-gray-600 font-medium">Tue</div>
+                    <div class="text-gray-600 font-medium">Wed</div>
+                    <div class="text-gray-600 font-medium">Thu</div>
+                    <div class="text-gray-600 font-medium">Fri</div>
+                    <div class="text-gray-600 font-medium">Sat</div>
+                </div>
+                
+                <!-- Calendar days container -->
+                <div class="grid grid-cols-7 gap-2 text-center mt-2" id="calendar-days">
+                    <!-- Days will be generated dynamically with JavaScript -->
+                </div>
+            </div>
+
+            <!-- Right column - Progress Tracker -->
+            <div class="bg-[#EFF0FD] p-6 rounded-lg shadow-sm">
+                <h2 class="text-gray-800 font-bold text-xl mb-4">Progress Tracker</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-green-600 mr-3">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span>Chapter 1: Memory Management</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-green-600 mr-3">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span>Chapter 2: Fork</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-green-600 mr-3">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span>Chapter 3: Wait and Exit</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-green-600 mr-3">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span>Chapter 4: Process Management</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-green-600 mr-3">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span>Chapter 5: Recap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom action buttons -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+            <button class="bg-blue-900 text-white px-4 py-2 rounded">
+                Confirm
+            </button>
+            <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded">
+                Cancel
+            </button>
+        </div>
+    </main>
+
+    <!-- JavaScript for Dynamic Calendar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Calendar state
+            const currentDate = new Date();
+            let currentMonth = currentDate.getMonth();
+            let currentYear = currentDate.getFullYear();
+            const selectedDates = [];
+            
+            // Month names
+            const monthNames = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            
+            // DOM elements
+            const monthYearElement = document.getElementById('month-year');
+            const calendarDaysElement = document.getElementById('calendar-days');
+            const prevMonthButton = document.getElementById('prev-month');
+            const nextMonthButton = document.getElementById('next-month');
+            
+            // Initialize the calendar
+            updateCalendar();
+            
+            // Event listeners for month navigation
+            prevMonthButton.addEventListener('click', function() {
+                currentMonth--;
+                if (currentMonth < 0) {
+                    currentMonth = 11;
+                    currentYear--;
+                }
+                updateCalendar();
+            });
+            
+            nextMonthButton.addEventListener('click', function() {
+                currentMonth++;
+                if (currentMonth > 11) {
+                    currentMonth = 0;
+                    currentYear++;
+                }
+                updateCalendar();
+            });
+            
+            // Function to handle date click - toggle selection
+            function handleDateClick(element, dateString) {
+                const index = selectedDates.indexOf(dateString);
+                
+                if (index > -1) {
+                    // Date is already selected, so unselect it
+                    selectedDates.splice(index, 1);
+                    element.classList.remove('bg-blue-500', 'text-white');
+                } else {
+                    // Date is not selected, so select it
+                    selectedDates.push(dateString);
+                    element.classList.add('bg-blue-500', 'text-white');
+                }
+            }
+            
+            // Update the calendar display
+            function updateCalendar() {
+                // Update month and year display
+                monthYearElement.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+                
+                // Clear existing calendar days
+                calendarDaysElement.innerHTML = '';
+                
+                // Get the first day of the month
+                const firstDay = new Date(currentYear, currentMonth, 1);
+                // Get the last day of the month
+                const lastDay = new Date(currentYear, currentMonth + 1, 0);
+                
+                const daysInMonth = lastDay.getDate();
+                const startingDayOfWeek = firstDay.getDay(); // 0 = Sunday, 1 = Monday, etc.
+                
+                // Add empty cells for days before the first day of the month
+                for (let i = 0; i < startingDayOfWeek; i++) {
+                    const emptyCell = document.createElement('div');
+                    emptyCell.className = 'p-2';
+                    calendarDaysElement.appendChild(emptyCell);
+                }
+                
+                // Add days of the month
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const dayElement = document.createElement('div');
+                    dayElement.textContent = day;
+                    
+                    // Base classes for all date cells
+                    dayElement.className = 'p-2 text-center rounded cursor-pointer';
+                    
+                    // Check if this date is selected
+                    const dateString = `${currentYear}-${currentMonth + 1}-${day}`;
+                    const isSelected = selectedDates.includes(dateString);
+                    
+                    if (isSelected) {
+                        dayElement.classList.add('bg-blue-500', 'text-white');
+                    }
+                    
+                    // Add click event to toggle selection immediately
+                    dayElement.addEventListener('click', function() {
+                        // Toggle the blue background directly
+                        if (this.classList.contains('bg-blue-500')) {
+                            this.classList.remove('bg-blue-500', 'text-white');
+                            // Remove from selected dates
+                            const index = selectedDates.indexOf(dateString);
+                            if (index > -1) {
+                                selectedDates.splice(index, 1);
+                            }
+                        } else {
+                            this.classList.add('bg-blue-500', 'text-white');
+                            // Add to selected dates
+                            if (!selectedDates.includes(dateString)) {
+                                selectedDates.push(dateString);
+                            }
+                        }
+                    });
+                    
+                    calendarDaysElement.appendChild(dayElement);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

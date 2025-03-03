@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .tab-button {
+    @apply px-4 py-2 rounded-md text-sm font-medium transition-colors;
+  }
+ 
+  .tab-button.active {
+    @apply bg-accent text-white;
+  }
+ 
+  .tab-button.inactive {
+    @apply bg-white text-black;
+  }
+ 
+  .chapter-item {
+    @apply flex items-center p-3 rounded-md mb-2 hover:bg-secondary/50 transition-colors;
+  }
+ 
+  .check-icon {
+    @apply ml-auto text-green-600;
+  }
+ 
+  .action-button {
+    @apply flex items-center justify-center gap-2 py-3 px-6 rounded-full text-white font-medium;
+  }
+}
