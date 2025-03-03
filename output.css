@@ -1,0 +1,246 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .subject-grid {
+    @apply grid-cols-3;
+  }
+}
+
+@media (max-width: 992px) {
+  .subject-grid {
+    @apply grid-cols-2;
+  }
+  .hero-left, .hero-right {
+    @apply w-full text-center;
+  }
+  .hero {
+    @apply flex-col;
+  }
+}
+
+@media (max-width: 768px) {
+  .subject-grid {
+    @apply grid-cols-1;
+  }
+  .footer-content {
+    @apply flex-col items-center;
+  }
+  .footer-section {
+    @apply mb-8;
+  }
+}
+
+@media (max-width: 576px) {
+  .cta-buttons {
+    @apply flex-col;
+  }
+  .cta-button {
+    @apply mb-4;
+  }
+  .pagination-button {
+    @apply p-2;
+  }
+}
+/* Reset styles */
+* {
+  @apply box-border m-0 p-0;
+}
+
+/* Global styles */
+body {
+  @apply text-base text-[#333];
+  font-family: Arial, sans-serif;
+}
+a {
+  @apply no-underline text-inherit;
+}
+ul {
+  @apply list-none;
+}
+
+/* Header styles */
+header {
+  @apply bg-[#0044b3] p-4;
+}
+nav {
+  @apply flex justify-between items-center;
+}
+nav ul {
+  @apply flex items-center;
+}
+nav li {
+  @apply relative mx-4 my-0;
+}
+nav li:not(:last-child)::after {
+  @apply content-[""] absolute -translate-y-2/4 right-[-1rem] h-[1.2rem] w-px bg-white top-2/4;
+}
+nav a {
+  @apply text-white font-[bold];
+}
+.left-items {
+  @apply flex;
+}
+.right-items {
+  @apply flex;
+}
+.underlined {
+  @apply relative after:content-[""] after:absolute after:bottom-[-0.5rem] after:w-full after:h-0.5 after:bg-white after:left-0;
+}
+
+/* Hero section styles */
+.hero {
+  @apply bg-white flex justify-center items-center px-8 py-16;
+}
+.hero-left {
+  @apply w-[66.67%] text-center pr-8;
+}
+.hero-right {
+  @apply w-[33.33%];
+}
+.hero-right img {
+  @apply w-full h-auto;
+}
+.hero h1 {
+  @apply text-[2.5rem] ml-5 mb-4;
+}
+.hero p {
+  @apply mb-8;
+}
+.cta-buttons {
+  @apply flex justify-center gap-4;
+}
+.cta-button {
+  @apply inline-block bg-[#0044b3] text-white rounded font-[bold] transition-[background-color] duration-[0.3s] px-6 py-[0.8rem] hover:bg-[#003399];
+}
+
+/* Features section styles */
+.features {
+  @apply grid grid-cols-[repeat(4,1fr)] gap-8 bg-neutral-100 px-8 py-16;
+}
+.feature-item {
+  @apply text-center;
+}
+.feature-item img {
+  @apply max-w-[100px] mb-4;
+}
+
+/* CTA section styles */
+.cta {
+  @apply bg-white text-[#0044b3] text-center px-8 py-16;
+}
+.cta h2 {
+  @apply text-[2rem] mb-4;
+}
+.cta p {
+  @apply mb-8;
+}
+
+/* Footer styles */
+footer {
+  @apply bg-neutral-100 px-8 py-16;
+}
+.footer-content {
+  @apply flex justify-between mb-8;
+}
+.footer-section h3 {
+  @apply text-[1.2rem] mb-4;
+}
+.footer-section ul li {
+  @apply mb-2;
+}
+.social-icons a {
+  @apply w-12 h-12 mr-2;
+}
+.copyright {
+  @apply text-center text-[#666];
+}
+
+/* Subjects List Styles */
+.search-container {
+  @apply flex justify-center mb-8;
+}
+.search-container input {
+  @apply border rounded w-[300px] px-4 py-2 border-solid border-[#ccc];
+}
+.search-button {
+  @apply bg-[#0044b3] text-white rounded cursor-pointer px-4 py-2 border-[none];
+}
+.subject-grid {
+  @apply grid grid-cols-[repeat(4,1fr)] gap-4 px-8 py-16;
+}
+.subject-card {
+  @apply rounded shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center font-[bold] cursor-pointer transition-transform duration-[0.3s] bg-[#EFF0FD] text-[#0D1966] p-6 hover:translate-y-[-5px];
+}
+.pagination {
+  @apply flex justify-center mt-8;
+}
+.pagination-button {
+  @apply bg-white text-[#0044b3] border rounded cursor-pointer transition-[background-color] duration-[0.3s,color] delay-[0.3s] mx-2 my-0 px-4 py-2 border-solid border-[#0044b3];
+}
+.pagination-button.active,
+.pagination-button:hover {
+  @apply bg-[#0044b3] text-white;
+}
+.welcome-back-container {
+  @apply absolute w-full h-full bg-[rgba(0,0,0,0.5)] backdrop-blur-[5px] flex justify-center items-center z-[999] left-0 top-0;
+}
+.welcome-back-window {
+  @apply bg-white shadow-[0_4px_8px_rgba(0,0,0,0.1)] text-center p-8 rounded-lg;
+}
+.welcome-back-window h2 {
+  @apply text-[1.8rem] mb-4;
+}
+.welcome-back-window p {
+  @apply mb-6;
+}
+.form-group {
+  @apply text-left mb-4;
+}
+.verify-button {
+  @apply bg-[#0044b3] text-white cursor-pointer text-[0.95rem] transition-[background-color] duration-[0.3s] px-6 py-[0.8rem] rounded-md border-[none] hover:bg-[#003399];
+}
+.leaderboard-container {
+  @apply absolute w-full h-full bg-[rgba(0,0,0,0.5)] flex justify-center items-center z-[999] left-0 top-0;
+}
+.leaderboard-window {
+  @apply bg-white shadow-[0_4px_8px_rgba(0,0,0,0.1)] text-center w-[600px] p-8 rounded-lg;
+}
+.leaderboard-window h2 {
+  @apply text-[1.8rem] mb-8;
+}
+.podium {
+  @apply flex justify-center mb-8;
+}
+.podium-item {
+  @apply mx-4 my-0;
+}
+.medal {
+  @apply w-[50px] h-[50px] flex justify-center items-center font-[bold] text-white mb-2 rounded-[50%];
+}
+.medal.gold {
+  @apply bg-[#ffd700];
+}
+.medal.silver {
+  @apply bg-[#c0c0c0];
+}
+.medal.bronze {
+  @apply bg-[#cd7f32];
+}
+.leaderboard-table {
+  @apply w-full border-collapse;
+}
+.leaderboard-table th,
+.leaderboard-table td {
+  @apply p-[0.8rem] border-b-[#ddd] border-b border-solid;
+}
+.leaderboard-table th {
+  @apply text-left bg-[#f2f2f2];
+}
+.close-button {
+  @apply bg-[#0044b3] text-white cursor-pointer text-[0.95rem] transition-[background-color] duration-[0.3s] px-6 py-[0.8rem] rounded-md border-[none] hover:bg-[#003399];
+}

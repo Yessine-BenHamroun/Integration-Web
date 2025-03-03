@@ -1,0 +1,420 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Header styles */
+header {
+  background-color: #0044b3;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 1rem;
+  position: relative;
+}
+
+nav li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -1rem;
+  height: 1.2rem;
+  width: 1px;
+  background-color: #fff;
+}
+
+nav a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.left-items {
+  display: flex;
+}
+
+.right-items {
+  display: flex;
+}
+
+.underlined {
+  position: relative;
+}
+
+.underlined::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+/* Hero section styles */
+.hero {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-left {
+  width: 66.67%;
+  padding-right: 2rem;
+  text-align: center;
+}
+
+.hero-right {
+  width: 33.33%;
+}
+
+.hero-right img {
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  margin-left: 20px;
+
+}
+
+.hero p {
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #0044b3;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #003399;
+}
+
+/* Features section styles */
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #f5f5f5;
+}
+
+.feature-item {
+  text-align: center;
+}
+
+.feature-item img {
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
+
+/* CTA section styles */
+.cta {
+  background-color: #fff;
+  color: #0044b3;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  margin-bottom: 2rem;
+}
+
+/* Footer styles */
+footer {
+  background-color: #f5f5f5;
+  padding: 4rem 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.social-icons a {
+  margin-right: 0.5rem;
+  width: 48px;
+  height: 48px;
+}
+
+.copyright {
+  text-align: center;
+  color: #666;
+}
+
+/* Subjects List Styles */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.search-container input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.search-button {
+  background-color: #0044b3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 4rem 2rem;
+
+
+
+
+}
+
+.subject-card {
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+  background-color: #EFF0FD;
+  color: #0D1966;
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination-button {
+  background-color: #fff;
+  color: #0044b3;
+  border: 1px solid #0044b3;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-button.active,
+.pagination-button:hover {
+  background-color: #0044b3;
+  color: #fff;
+}
+
+.welcome-back-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.welcome-back-window {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.welcome-back-window h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-back-window p {
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.verify-button {
+  background-color: #0044b3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.verify-button:hover {
+  background-color: #003399;
+}
+
+.leaderboard-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.leaderboard-window {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 600px;
+}
+
+.leaderboard-window h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.podium {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.podium-item {
+  margin: 0 1rem;
+}
+
+.medal {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.medal.gold {
+  background-color: #ffd700;
+}
+
+.medal.silver {
+  background-color: #c0c0c0;
+}
+
+.medal.bronze {
+  background-color: #cd7f32;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-table th {
+  text-align: left;
+  background-color: #f2f2f2;
+}
+
+.close-button {
+  background-color: #0044b3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.close-button:hover {
+  background-color: #003399;
+}
