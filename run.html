@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Python Code</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-base text-gray-800 font-sans">
+
+    <!-- Navbar -->
+    <header class="bg-blue-500 text-white">
+        <!-- Top bar -->
+        <div class="bg-blue-900 text-center py-2 text-sm">
+            For Students
+        </div>
+    
+        <!-- Header content -->
+        <div class="flex items-center justify-between p-4">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <h1 class="font-bold text-xl text-white-400">
+                    <i>Innov8</i>
+                </h1>
+                <img src="img/image.png" alt="Logo" class="h-8 w-auto">
+            </div>
+    
+            <!-- User info with icons -->
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-bell text-xl text-white"></i>
+                <span class="text-sm text-white">Yessine B. Hamroun</span>
+                <i class="fas fa-user-circle text-xl text-white"></i>
+                <i class="fas fa-cog text-xl text-white"></i>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="container mx-auto p-6">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-white">Execution Result <i class="fas fa-angle-right"></i></h2>
+            <button onclick="goBack()" class="bg-gray-700 text-white px-4 py-2 rounded flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Retour
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Read-Only Code Editor -->
+            <div class="border p-4 rounded shadow-lg bg-black">
+                <textarea id="codeDisplay" class="w-full h-48 p-2 border rounded text-white bg-black" readonly></textarea>
+            </div>
+
+            <!-- Terminal Output -->
+            <div class="border p-4 rounded shadow-lg bg-black">
+                <pre id="output" class="text-white"></pre>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-100 px-8 py-16 mt-10">
+        <div class="flex justify-between mb-8">
+            <div>
+                <h3 class="text-lg font-bold">Innov8</h3>
+                <ul>
+                    <li class="mb-2"><a href="#">About</a></li>
+                    <li class="mb-2"><a href="#">Our Features</a></li>
+                    <li class="mb-2"><a href="#">Why Choose Innov8</a></li>
+                    <li class="mb-2"><a href="#">Innov8 Plus</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold">Where to find us</h3>
+                <p>Esprit Bloc G, Ariana Soghra</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold">Contact</h3>
+                <p>innovo.contact@innov8.com</p>
+            </div>
+        </div>
+        <div class="text-center text-gray-600">
+            <p>&copy; 2025 Innov8 Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        // Load the saved code
+        document.getElementById("codeDisplay").value = localStorage.getItem("savedCode") || "";
+
+        // Simulate output (Replace this with real Python execution later)
+        document.getElementById("output").innerText = "Execution result of:\n\n" + localStorage.getItem("savedCode");
+    </script>
+</body>
+</html>
