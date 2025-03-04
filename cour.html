@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innov8 - Advanced Operating System</title>
+    <link href="./output.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+    <!-- Header with "For Students" text -->
+    <header class="bg-blue-900 text-white h-11 relative overflow-hidden">
+        <div class="container mx-auto py-2 px-4">
+            <div class="text-base font-normal">For Students</div>
+        </div>
+    </header>
+
+    <!-- Logo and user navigation -->
+    <nav class="bg-blue-100 h-30 relative overflow-hidden">
+        <div class="container mx-auto flex justify-between items-center py-3 px-4">
+            <div class="flex items-center">
+                <div class="text-blue-900 text-5xl font-semibold">Innov8</div>
+                <img class="w-30 h-14 ml-4" src="https://placehold.co/119x54" alt="Logo" />
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="text-blue-900 text-3xl font-normal">Yessine B.Hamroun</div>
+                <div class="text-blue-900">
+                    <i class="fas fa-bell text-2xl"></i>
+                </div>
+                <div class="text-blue-900">
+                    <i class="fas fa-user-circle text-2xl"></i>
+                </div>
+                <div class="text-blue-900">
+                    <i class="fas fa-cog text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main class="container mx-auto py-6 px-4 flex-grow">
+        <!-- Title on left, Retour button and tutor on right -->
+        <div class="flex flex-col lg:flex-row items-start justify-between mb-8">
+            <!-- Left side - Course title -->
+            <div class="order-1">
+                <h1 class="text-blue-900 text-2xl font-bold mb-2 lg:mb-0">Advanced Operating System</h1>
+            </div>
+            
+            <!-- Right side - Back button and tutor dropdown -->
+            <div class="flex items-center gap-4 mb-4 lg:mb-0 order-2">
+                <div class="flex items-center text-blue-900">
+                    <span class="font-medium mr-2">Tutor:</span>
+                    <select class="bg-white border border-gray-300 rounded px-2 py-1">
+                        <option value="nour">Nour</option>
+                        <option value="yessine">Yessine</option>
+                        <option value="hamroun">Hamroun</option>
+                    </select>
+                </div>
+                <a href="subjects.html" class="inline-flex items-center bg-blue-900 text-white px-4 py-2 rounded">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back
+                </a>
+            </div>
+        </div>
+
+        <!-- Two column layout for content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Left column - Course content -->
+            <div class="bg-[#EFF0FD] p-6 rounded-lg shadow-sm">
+                <div class="mb-4">
+                    <h2 class="text-gray-800 font-bold">1. Definition of a Process</h2>
+                    <p class="text-gray-700 mt-2">
+                        A process (or Process in English) is a program in execution. Every process has its own characteristics: an identification number, resources it uses such as open files, and is always in a state (running, waiting, etc.).
+                    </p>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="text-gray-800 font-medium">A process consists of:</h3>
+                    <ul class="text-gray-700 mt-2 pl-5 list-disc">
+                        <li>An executable code of the running program.</li>
+                        <li>A context that provides the environment of the process.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-4">
+                    <h2 class="text-gray-800 font-bold">2. Characteristics of a Process</h2>
+                    
+                    <div class="mt-2">
+                        <h3 class="text-gray-800 font-medium">a. Static Characteristics:</h3>
+                        <ul class="text-gray-700 mt-2 pl-5 list-disc">
+                            <li>A unique PID (Process Identifier).</li>
+                            <li>An owner determining the process's access rights to resources: opening files, etc.</li>
+                            <li>A parent process from which it inherits most characteristics.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-2">
+                        <h3 class="text-gray-800 font-medium">b. Dynamic Characteristics:</h3>
+                        <ul class="text-gray-700 mt-2 pl-5 list-disc">
+                            <li>Priority, execution environment.</li>
+                            <li>Amount of resources consumed (CPU time used, etc.).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Video player controls -->
+                <div class="mt-8 flex items-center">
+                    <button class="text-gray-700 mr-2">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="relative flex-grow h-2 bg-gray-300 rounded-full">
+                        <div class="absolute top-0 left-0 w-1/3 h-full bg-blue-900 rounded-full"></div>
+                    </div>
+                    <button class="text-gray-700 mx-2">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <button class="text-gray-700">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right column - Course navigation -->
+            <div class="bg-[#EFF0FD] p-6 rounded-lg shadow-sm">
+                <!-- Tabs -->
+                <div class="flex space-x-2 mb-6">
+                    <button id="lessonsBtn" class="px-4 py-2 rounded">Lessons</button>
+                    <button id="exercisesBtn" class="px-4 py-2 rounded"> <a href="exercices.html" > Exercises </a></button>
+                    <button id="questionsBtn" class="px-4 py-2 rounded">Questions</button>
+                </div>
+
+                <!-- Chapters list -->
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-blue-900 mr-3">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <span>Chapter 1: Memory Management</span>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-blue-900 mr-3">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <span>Chapter 2: Fork</span>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-blue-900 mr-3">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <span>Chapter 3: Wait and Exit</span>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-blue-900 mr-3">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <span>Chapter 4: Process Management</span>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="text-blue-900 mr-3">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <span>Chapter 5: Recap</span>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom action buttons -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+            <button class="action-button bg-accent" onclick="window.location.href='agenda.html'">
+                <i class="fas fa-video"></i>
+                <span>Request a Live Session</span>
+            </button>
+            
+            <button class="action-button bg-primary">
+                <i class="fas fa-file-pdf"></i>
+                <span>PDF</span>
+            </button>
+            
+            <button id="SimulateBtn" class="action-button bg-primary">
+                <i class="fas fa-desktop"></i>
+                <span>Simulate</span>
+            </button>
+        </div>
+    </main>
+
+    <script>
+        // JavaScript for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the buttons
+            const lessonsBtn = document.getElementById('lessonsBtn');
+            const exercisesBtn = document.getElementById('exercisesBtn');
+            const questionsBtn = document.getElementById('questionsBtn');
+
+            // Function to handle button clicks
+            function handleButtonClick(button, pageUrl) {
+                // Remove active class from all buttons
+                lessonsBtn.classList.remove('bg-blue-600', 'text-white');
+                exercisesBtn.classList.remove('bg-blue-600', 'text-white');
+                questionsBtn.classList.remove('bg-blue-600', 'text-white');
+
+                // Add active class to the clicked button
+                button.classList.add('bg-blue-600', 'text-white');
+
+                // Save the active button in session storage
+                sessionStorage.setItem('activeButton', button.id);
+
+                // Navigate to the specified page
+                window.location.href = pageUrl;
+            }
+
+            // Add event listeners to the buttons
+            lessonsBtn.addEventListener('click', () => handleButtonClick(lessonsBtn, 'cour.html'));
+            exercisesBtn.addEventListener('click', () => handleButtonClick(exercisesBtn, 'exercices.html'));
+            questionsBtn.addEventListener('click', () => handleButtonClick(questionsBtn, 'questions.html'));
+            SimulateBtn.addEventListener('click', () => handleButtonClick(SimulateBtn, 'simulation1.html'));
+
+            // Highlight the active button based on session storage
+            const activeButtonId = sessionStorage.getItem('activeButton');
+            if (activeButtonId) {
+                const activeButton = document.getElementById(activeButtonId);
+                if (activeButton) {
+                    activeButton.classList.add('bg-blue-600', 'text-white');
+                }
+            }
+        });
+    </script>
+    
+<footer class="bg-gray-100 py-10">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between text-center md:text-left space-y-6 md:space-y-0">
+            
+            <!-- Section Innov8 -->
+            <div>
+                <ul class="mt-2 space-y-1">
+                  <h3 class="font-bold text-lg">Innov8</h3>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">About</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Our Features</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Why Choose Innov8</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Innov8 Plus</a></li>
+                </ul>
+            </div>
+
+            <!-- Section Location -->
+            <div>
+                <h3 class="font-bold text-lg">Where to find us</h3>
+                <p class="text-gray-600 mt-2">Esprit Bloc G, Ariana Soghra</p>
+            </div>
+
+            <!-- Section Contact -->
+            <div>
+                <h3 class="font-bold text-lg">Contact</h3>
+                <p class="text-gray-600 mt-2">innovo.contact@innov8.com</p>
+                <div class="flex justify-center md:justify-start space-x-4 mt-3">
+                    <a href="#"><img src="img/facebook_5968764.png" style="height: 48px; width: 48px" alt="Facebook"></a>
+                    <a href="#"><img src="img/icons8-instagram-48.png" class="h-10 w-10" alt="Instagram"></a>
+                    <a href="#"><img src="img/icons8-linkedin-48.png" class="h-10 w-10" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="text-center text-gray-500 text-sm mt-6">
+            &copy; 2025 Innov8 Inc. All rights reserved.
+        </div>
+    </div>
+</footer>
+</body>
+</html>

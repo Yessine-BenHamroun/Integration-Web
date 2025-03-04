@@ -42,8 +42,8 @@
     <div class="container mx-auto p-6">
         <div class="flex justify-between items-center mb-6">
             <h2 class="text-2xl font-bold">Simulation <i class="fas fa-angle-right"></i></h2>
-            <button class="bg-gray-700 text-white px-4 py-2 rounded flex items-center">
-                <i class="fas fa-arrow-left mr-2"></i> Retour
+            <button onclick="goBack()" class="bg-gray-700 text-white px-4 py-2 rounded flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Back
             </button>
         </div>
 
@@ -102,6 +102,9 @@
 
         function clearCode() {
             document.getElementById("codeInput").value = "";
+        }
+        function goBack() {
+            window.history.back();
         }
     </script>
 </body>
