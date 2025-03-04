@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innov8 - Advanced Operating System</title>
+    <link href="./output.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+    <!-- Header with "For Students" text -->
+    <header class="bg-blue-900 text-white h-11 relative overflow-hidden">
+        <div class="container mx-auto py-2 px-4">
+            <div class="text-base font-normal">For Students</div>
+        </div>
+    </header>
+
+    <!-- Logo and user navigation -->
+    <nav class="bg-blue-100 h-30 relative overflow-hidden">
+        <div class="container mx-auto flex justify-between items-center py-3 px-4">
+            <div class="flex items-center">
+                <div class="text-blue-900 text-5xl font-semibold">Innov8</div>
+                <img class="w-30 h-14 ml-4" src="https://placehold.co/119x54" alt="Logo" />
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="text-blue-900 text-3xl font-normal">Yessine B.Hamroun</div>
+                <div class="text-blue-900">
+                    <i class="fas fa-bell text-2xl"></i>
+                </div>
+                <div class="text-blue-900">
+                    <i class="fas fa-user-circle text-2xl"></i>
+                </div>
+                <div class="text-blue-900">
+                    <i class="fas fa-cog text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main class="container mx-auto py-6 px-4 flex-grow">
+        <!-- Title and back button -->
+        <div class="flex flex-col lg:flex-row items-start justify-between mb-8">
+            <!-- Left side - Course title -->
+            <div class="order-1">
+                <h1 class="text-blue-900 text-2xl font-bold mb-2 lg:mb-0">Advanced Operating System</h1>
+            </div>
+            
+            <!-- Right side - Back button -->
+            <div class="flex items-center gap-4 mb-4 lg:mb-0 order-2">
+                <a href="#" class="inline-flex items-center bg-blue-900 text-white px-4 py-2 rounded">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back
+                </a>
+            </div>
+        </div>
+
+        <!-- Two column layout for content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Left column - Course content -->
+            <div class="bg-[#EFF0FD] p-6 rounded-lg shadow-sm">
+                <h2 class="text-gray-800 font-bold text-xl mb-4">1. Definition of a Process</h2>
+                <p class="text-gray-700 mt-2">
+                    A process (Process in English) is a program in execution. Every process has its own characteristics: an identification number, resources it uses such as open files, and is always in a state (running, waiting, etc.).
+                </p>
+
+                <div class="mt-4">
+                    <h3 class="text-gray-800 font-medium">A process consists of:</h3>
+                    <ul class="text-gray-700 mt-2 pl-5 list-disc">
+                        <li>An executable code of the running program.</li>
+                        <li>A context that provides the environment of the process.</li>
+                    </ul>
+                </div>
+
+                <div class="mt-4">
+                    <h2 class="text-gray-800 font-bold">2. Characteristics of a Process</h2>
+                    <div class="mt-2">
+                        <h3 class="text-gray-800 font-medium">a. Static Characteristics:</h3>
+                        <ul class="text-gray-700 mt-2 pl-5 list-disc">
+                            <li>A unique PID (Process Identifier).</li>
+                            <li>An owner determining the process's access rights to resources: opening files, etc.</li>
+                            <li>A parent process from which it inherits most characteristics.</li>
+                        </ul>
+                    </div>
+                    <div class="mt-2">
+                        <h3 class="text-gray-800 font-medium">b. Dynamic Characteristics:</h3>
+                        <ul class="text-gray-700 mt-2 pl-5 list-disc">
+                            <li>Priority, execution environment.</li>
+                            <li>Amount of resources consumed (CPU time used, etc.).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right column - Messaging system and buttons -->
+            <div class="bg-[#EFF0FD] p-6 rounded-lg shadow-sm">
+                <!-- Tabs for Lessons, Exercises, and Questions -->
+                <div class="flex space-x-2 mb-6">
+                    <button id="lessonsBtn" class="bg-blue-600 text-white px-4 py-2 rounded">Lessons</button>
+                    <button id="exercisesBtn" class="px-4 py-2 rounded">Exercises</button>
+                    <button id="questionsBtn" class="px-4 py-2 rounded">Questions</button>
+                </div>
+
+                <!-- Messages container -->
+                <div id="messages" class="h-64 overflow-y-auto mb-4 p-4 bg-white rounded-lg shadow-inner">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+
+                <!-- Message input and send button -->
+                <div class="flex gap-2">
+                    <input id="messageInput" type="text" placeholder="Type your message..." class="flex-grow p-2 border border-gray-300 rounded-lg">
+                    <button id="sendButton" class="bg-blue-900 text-white px-4 py-2 rounded-lg">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom action buttons -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+            <button class="action-button bg-accent" onclick="window.location.href='agenda.html'">
+                <i class="fas fa-video"></i>
+                <span>Request a Live Session</span>
+            </button>
+        </div>
+    </main>
+
+    <script>
+        // WebSocket setup for real-time messaging
+        const socket = new WebSocket('ws://your-websocket-server-url');
+
+        // Get DOM elements
+        const messagesContainer = document.getElementById('messages');
+        const messageInput = document.getElementById('messageInput');
+        const sendButton = document.getElementById('sendButton');
+
+        // Function to add a message to the messages container
+        function addMessage(message, isSender = false) {
+            const messageElement = document.createElement('div');
+            messageElement.className = `p-2 mb-2 rounded-lg ${isSender ? 'bg-blue-100 ml-auto' : 'bg-gray-100'}`;
+            messageElement.textContent = message;
+            messagesContainer.appendChild(messageElement);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight; // Auto-scroll to the latest message
+        }
+
+        // Send message when the send button is clicked
+        sendButton.addEventListener('click', () => {
+            const message = messageInput.value.trim();
+            if (message) {
+                socket.send(JSON.stringify({ type: 'message', content: message }));
+                addMessage(message, true); // Add the message to the UI as sent by the user
+                messageInput.value = ''; // Clear the input field
+            }
+        });
+
+        // Handle incoming messages from the WebSocket server
+        socket.addEventListener('message', (event) => {
+            const data = JSON.parse(event.data);
+            if (data.type === 'message') {
+                addMessage(data.content); // Add the message to the UI as received
+            }
+        });
+
+        // Handle WebSocket connection errors
+        socket.addEventListener('error', (error) => {
+            console.error('WebSocket error:', error);
+        });
+
+        // Handle WebSocket connection close
+        socket.addEventListener('close', () => {
+            console.log('WebSocket connection closed');
+        });
+
+        // Tab switching functionality
+        const lessonsBtn = document.getElementById('lessonsBtn');
+        const exercisesBtn = document.getElementById('exercisesBtn');
+        const questionsBtn = document.getElementById('questionsBtn');
+
+        lessonsBtn.addEventListener('click', () => {
+            window.location.href = 'cour.html';
+        });
+
+        exercisesBtn.addEventListener('click', () => {
+            window.location.href = 'exercices.html';
+        });
+
+        questionsBtn.addEventListener('click', () => {
+            window.location.href = 'questions.html';
+        });
+    </script>
+</body>
+</html>
