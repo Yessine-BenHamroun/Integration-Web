@@ -13,6 +13,7 @@ Meet our talented and passionate team, bringing expertise in **development**, **
 
 ## 📌 Project Overview
 This repository contains the latest **developments** and **contributions** from the Innov8 team. We are committed to building applications that are:
+
 ✅ **Scalable**  
 ✅ **Efficient**  
 ✅ **User-friendly**  
